@@ -1,30 +1,39 @@
-const roleRepository = require('../repositories/RoleRepository');
+const { Role } = require('../db/models');
 const logger = require('../utils/logger');
 
 class RoleService {
   async create(roleData) {
     logger.info('Creating a new role', { roleData });
-    return await roleRepository.create(roleData);
+    return await Role.create(roleData);
   }
 
   async findAll() {
     logger.info('Fetching all roles');
-    return await roleRepository.findAll();
+    return await Role.findAll();
   }
 
   async findById(id) {
     logger.info(`Fetching role with id: ${id}`);
-    return await roleRepository.findById(id);
+    return await Role.findByPk(id);
   }
 
   async update(id, roleData) {
     logger.info(`Updating role with id: ${id}`, { roleData });
-    return await roleRepository.update(id, roleData);
+    const role = await this.findById(id);
+    if (role) {
+      return await role.update(roleData);
+    }
+    return null;
   }
 
   async delete(id) {
     logger.info(`Deleting role with id: ${id}`);
-    return await roleRepository.delete(id);
+    const role = await this.findById(id);
+    if (role) {
+      await role.destroy();
+      return true;
+    }
+    return false;
   }
 }
 

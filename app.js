@@ -1,13 +1,18 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var roleRouter = require('./routes/role');
+const indexRouter = require('./routes/index');
+const RoleUseCase = require('./src/application/use-cases/RoleUseCase');
+const SequelizeRoleRepository = require('./src/infrastructure/repositories/SequelizeRoleRepository');
+const roleRouter = require('./src/presentation/routes/role');
 
-var app = express();
+const app = express();
+
+// Instantiate repository and use case
+const roleRepository = new SequelizeRoleRepository();
+const roleUseCase = new RoleUseCase(roleRepository);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -16,7 +21,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/roles', roleRouter);
+app.use('/roles', roleRouter(roleUseCase));
 
 module.exports = app;

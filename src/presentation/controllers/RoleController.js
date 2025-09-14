@@ -1,12 +1,15 @@
-const roleService = require('../services/RoleService');
-const logger = require('../utils/logger');
-const customResponse = require('../utils/customResponse');
+const logger = require('../../utils/logger');
+const customResponse = require('../../utils/customResponse');
 
 class RoleController {
+  constructor(roleUseCase) {
+    this.roleUseCase = roleUseCase;
+  }
+
   async create(req, res) {
     logger.info('POST /roles - creating a new role', { body: req.body });
     try {
-      const role = await roleService.create(req.body);
+      const role = await this.roleUseCase.createRole(req.body);
       logger.info('Successfully created a new role', { role });
       customResponse.success(res, role, 'Role created successfully', 201);
     } catch (error) {
@@ -18,7 +21,7 @@ class RoleController {
   async findAll(req, res) {
     logger.info('GET /roles - fetching all roles');
     try {
-      const roles = await roleService.findAll();
+      const roles = await this.roleUseCase.getAllRoles();
       logger.info('Successfully fetched all roles');
       customResponse.success(res, roles, 'Roles fetched successfully');
     } catch (error) {
@@ -30,7 +33,7 @@ class RoleController {
   async findById(req, res) {
     logger.info(`GET /roles/${req.params.id} - fetching role by id`);
     try {
-      const role = await roleService.findById(req.params.id);
+      const role = await this.roleUseCase.getRoleById(req.params.id);
       if (role) {
         logger.info(`Successfully fetched role with id: ${req.params.id}`);
         customResponse.success(res, role, 'Role fetched successfully');
@@ -47,7 +50,7 @@ class RoleController {
   async update(req, res) {
     logger.info(`PUT /roles/${req.params.id} - updating role by id`, { body: req.body });
     try {
-      const role = await roleService.update(req.params.id, req.body);
+      const role = await this.roleUseCase.updateRole(req.params.id, req.body);
       if (role) {
         logger.info(`Successfully updated role with id: ${req.params.id}`);
         customResponse.success(res, role, 'Role updated successfully');
@@ -64,7 +67,7 @@ class RoleController {
   async delete(req, res) {
     logger.info(`DELETE /roles/${req.params.id} - deleting role by id`);
     try {
-      const result = await roleService.delete(req.params.id);
+      const result = await this.roleUseCase.deleteRole(req.params.id);
       if (result) {
         logger.info(`Successfully deleted role with id: ${req.params.id}`);
         customResponse.success(res, null, 'Role deleted successfully', 204);
@@ -79,4 +82,4 @@ class RoleController {
   }
 }
 
-module.exports = new RoleController();
+module.exports = RoleController;

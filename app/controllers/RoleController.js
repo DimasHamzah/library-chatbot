@@ -1,5 +1,6 @@
 const roleService = require('../services/RoleService');
 const logger = require('../utils/logger');
+const customResponse = require('../utils/customResponse');
 
 class RoleController {
   async create(req, res) {
@@ -7,10 +8,10 @@ class RoleController {
     try {
       const role = await roleService.create(req.body);
       logger.info('Successfully created a new role', { role });
-      res.status(201).json(role);
+      customResponse.success(res, role, 'Role created successfully', 201);
     } catch (error) {
       logger.error('Error creating a new role', { error: error.message });
-      res.status(500).json({ message: error.message });
+      customResponse.error(res, error.message);
     }
   }
 
@@ -19,10 +20,10 @@ class RoleController {
     try {
       const roles = await roleService.findAll();
       logger.info('Successfully fetched all roles');
-      res.status(200).json(roles);
+      customResponse.success(res, roles, 'Roles fetched successfully');
     } catch (error) {
       logger.error('Error fetching all roles', { error: error.message });
-      res.status(500).json({ message: error.message });
+      customResponse.error(res, error.message);
     }
   }
 
@@ -32,14 +33,14 @@ class RoleController {
       const role = await roleService.findById(req.params.id);
       if (role) {
         logger.info(`Successfully fetched role with id: ${req.params.id}`);
-        res.status(200).json(role);
+        customResponse.success(res, role, 'Role fetched successfully');
       } else {
         logger.warn(`Role with id: ${req.params.id} not found`);
-        res.status(404).json({ message: 'Role not found' });
+        customResponse.notFound(res, 'Role not found');
       }
     } catch (error) {
       logger.error(`Error fetching role with id: ${req.params.id}`, { error: error.message });
-      res.status(500).json({ message: error.message });
+      customResponse.error(res, error.message);
     }
   }
 
@@ -49,14 +50,14 @@ class RoleController {
       const role = await roleService.update(req.params.id, req.body);
       if (role) {
         logger.info(`Successfully updated role with id: ${req.params.id}`);
-        res.status(200).json(role);
+        customResponse.success(res, role, 'Role updated successfully');
       } else {
         logger.warn(`Role with id: ${req.params.id} not found for update`);
-        res.status(404).json({ message: 'Role not found' });
+        customResponse.notFound(res, 'Role not found');
       }
     } catch (error) {
       logger.error(`Error updating role with id: ${req.params.id}`, { error: error.message });
-      res.status(500).json({ message: error.message });
+      customResponse.error(res, error.message);
     }
   }
 
@@ -66,14 +67,14 @@ class RoleController {
       const result = await roleService.delete(req.params.id);
       if (result) {
         logger.info(`Successfully deleted role with id: ${req.params.id}`);
-        res.status(204).send();
+        customResponse.success(res, null, 'Role deleted successfully', 204);
       } else {
         logger.warn(`Role with id: ${req.params.id} not found for deletion`);
-        res.status(404).json({ message: 'Role not found' });
+        customResponse.notFound(res, 'Role not found');
       }
     } catch (error) {
       logger.error(`Error deleting role with id: ${req.params.id}`, { error: error.message });
-      res.status(500).json({ message: error.message });
+      customResponse.error(res, error.message);
     }
   }
 }

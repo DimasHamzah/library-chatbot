@@ -1,10 +1,10 @@
-const userStatusService = require('../app/services/UserStatusService');
-const userStatusRepository = require('../app/repositories/UserStatusRepository');
-const logger = require('../app/utils/logger');
+const userStatusService = require('../../app/services/UserStatusService');
+const userStatusRepository = require('../../app/repositories/UserStatusRepository');
+const logger = require('../../app/utils/logger');
 
 // Mock the repository and logger to isolate the service
-jest.mock('../app/repositories/UserStatusRepository');
-jest.mock('../app/utils/logger');
+jest.mock('../../app/repositories/UserStatusRepository');
+jest.mock('../../app/utils/logger');
 
 describe('UserStatusService', () => {
   // Clear all mocks after each test to ensure a clean slate

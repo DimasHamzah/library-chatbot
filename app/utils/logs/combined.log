@@ -262,3 +262,199 @@
 {"level":"info","message":"Successfully deleted role with id: 1","service":"user-service"}
 {"level":"info","message":"DELETE /roles/99 - deleting role by id","service":"user-service"}
 {"level":"warn","message":"Role with id: 99 not found for deletion","service":"user-service"}
+{"body":{"name":"new_admin"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"level":"info","message":"Successfully created a new role","role":{"id":3,"name":"new_admin"},"service":"user-service"}
+{"body":{"name":"pending"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"body":{"name":"new_admin"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new role","service":"user-service"}
+{"level":"info","message":"Successfully created a new user status","service":"user-service","userStatus":{"id":4,"name":"pending"}}
+{"level":"info","message":"GET /roles - fetching all roles","service":"user-service"}
+{"level":"info","message":"Successfully fetched all roles","service":"user-service"}
+{"level":"info","message":"GET /roles/1 - fetching role by id","service":"user-service"}
+{"level":"info","message":"Successfully fetched role with id: 1","service":"user-service"}
+{"body":{"name":"pending"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"level":"info","message":"GET /roles/99 - fetching role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found","service":"user-service"}
+{"level":"info","message":"GET /user-statuses - fetching all user statuses","service":"user-service"}
+{"level":"info","message":"Successfully fetched all user statuses","service":"user-service"}
+{"body":{"name":"super_admin"},"level":"info","message":"PUT /roles/1 - updating role by id","service":"user-service"}
+{"level":"info","message":"Successfully updated role with id: 1","service":"user-service"}
+{"level":"info","message":"GET /user-statuses/1 - fetching user status by id","service":"user-service"}
+{"level":"info","message":"Successfully fetched user status with id: 1","service":"user-service"}
+{"body":{"name":"non_existent"},"level":"info","message":"PUT /roles/99 - updating role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found for update","service":"user-service"}
+{"level":"info","message":"GET /user-statuses/99 - fetching user status by id","service":"user-service"}
+{"level":"info","message":"DELETE /roles/1 - deleting role by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found","service":"user-service"}
+{"level":"info","message":"Successfully deleted role with id: 1","service":"user-service"}
+{"body":{"name":"archived"},"level":"info","message":"PUT /user-statuses/1 - updating user status by id","service":"user-service"}
+{"level":"info","message":"Successfully updated user status with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /roles/99 - deleting role by id","service":"user-service"}
+{"body":{"name":"non_existent"},"level":"info","message":"PUT /user-statuses/99 - updating user status by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found for deletion","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found for update","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/1 - deleting user status by id","service":"user-service"}
+{"level":"info","message":"Successfully deleted user status with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/99 - deleting user status by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found for deletion","service":"user-service"}
+{"body":{"name":"new_status"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"level":"info","message":"Successfully created a new user status","service":"user-service","userStatus":{"id":1,"name":"new_status"}}
+{"body":{"name":"new_status"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"error":"Database failure","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"level":"info","message":"GET /user-statuses - fetching all user statuses","service":"user-service"}
+{"level":"info","message":"Successfully fetched all user statuses","service":"user-service"}
+{"level":"info","message":"GET /user-statuses/1 - fetching user status by id","service":"user-service"}
+{"level":"info","message":"Successfully fetched user status with id: 1","service":"user-service"}
+{"level":"info","message":"GET /user-statuses/99 - fetching user status by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found","service":"user-service"}
+{"body":{"name":"updated_status"},"level":"info","message":"PUT /user-statuses/1 - updating user status by id","service":"user-service"}
+{"level":"info","message":"Successfully updated user status with id: 1","service":"user-service"}
+{"body":{"name":"non_existent"},"level":"info","message":"PUT /user-statuses/99 - updating user status by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found for update","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/1 - deleting user status by id","service":"user-service"}
+{"level":"info","message":"Successfully deleted user status with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/99 - deleting user status by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found for deletion","service":"user-service"}
+{"body":{"name":"new_role"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"level":"info","message":"Successfully created a new role","role":{"id":1,"name":"new_role"},"service":"user-service"}
+{"body":{"name":"new_role"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"error":"Database failure","level":"error","message":"Error creating a new role","service":"user-service"}
+{"level":"info","message":"GET /roles - fetching all roles","service":"user-service"}
+{"level":"info","message":"Successfully fetched all roles","service":"user-service"}
+{"level":"info","message":"GET /roles/1 - fetching role by id","service":"user-service"}
+{"level":"info","message":"Successfully fetched role with id: 1","service":"user-service"}
+{"level":"info","message":"GET /roles/99 - fetching role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found","service":"user-service"}
+{"body":{"name":"updated_role"},"level":"info","message":"PUT /roles/1 - updating role by id","service":"user-service"}
+{"level":"info","message":"Successfully updated role with id: 1","service":"user-service"}
+{"body":{"name":"non_existent"},"level":"info","message":"PUT /roles/99 - updating role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found for update","service":"user-service"}
+{"level":"info","message":"DELETE /roles/1 - deleting role by id","service":"user-service"}
+{"level":"info","message":"Successfully deleted role with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /roles/99 - deleting role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found for deletion","service":"user-service"}
+{"body":{"name":"pending"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"body":{"name":"new_admin"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"level":"info","message":"Successfully created a new user status","service":"user-service","userStatus":{"id":4,"name":"pending"}}
+{"level":"info","message":"Successfully created a new role","role":{"id":3,"name":"new_admin"},"service":"user-service"}
+{"body":{"name":"pending"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"body":{"name":"new_admin"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new role","service":"user-service"}
+{"level":"info","message":"GET /user-statuses - fetching all user statuses","service":"user-service"}
+{"level":"info","message":"GET /roles - fetching all roles","service":"user-service"}
+{"level":"info","message":"Successfully fetched all user statuses","service":"user-service"}
+{"level":"info","message":"Successfully fetched all roles","service":"user-service"}
+{"level":"info","message":"GET /user-statuses/1 - fetching user status by id","service":"user-service"}
+{"level":"info","message":"GET /roles/1 - fetching role by id","service":"user-service"}
+{"level":"info","message":"Successfully fetched user status with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully fetched role with id: 1","service":"user-service"}
+{"level":"info","message":"GET /user-statuses/99 - fetching user status by id","service":"user-service"}
+{"level":"info","message":"GET /roles/99 - fetching role by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found","service":"user-service"}
+{"body":{"name":"super_admin"},"level":"info","message":"PUT /roles/1 - updating role by id","service":"user-service"}
+{"body":{"name":"archived"},"level":"info","message":"PUT /user-statuses/1 - updating user status by id","service":"user-service"}
+{"level":"info","message":"Successfully updated role with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully updated user status with id: 1","service":"user-service"}
+{"body":{"name":"non_existent"},"level":"info","message":"PUT /roles/99 - updating role by id","service":"user-service"}
+{"body":{"name":"non_existent"},"level":"info","message":"PUT /user-statuses/99 - updating user status by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found for update","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found for update","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/1 - deleting user status by id","service":"user-service"}
+{"level":"info","message":"DELETE /roles/1 - deleting role by id","service":"user-service"}
+{"level":"info","message":"Successfully deleted user status with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully deleted role with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/99 - deleting user status by id","service":"user-service"}
+{"level":"info","message":"DELETE /roles/99 - deleting role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found for deletion","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found for deletion","service":"user-service"}
+{"body":{"name":"e2e_tester"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"level":"info","message":"Creating a new role","roleData":{"name":"e2e_tester"},"service":"user-service"}
+{"level":"info","message":"Successfully created a new role","role":{"createdAt":"2025-09-16T05:19:33.546Z","id":1,"name":"e2e_tester","updatedAt":"2025-09-16T05:19:33.546Z"},"service":"user-service"}
+{"level":"info","message":"GET /roles - fetching all roles","service":"user-service"}
+{"level":"info","message":"Fetching all roles","service":"user-service"}
+{"level":"info","message":"Successfully fetched all roles","service":"user-service"}
+{"body":{"name":"now_updated"},"level":"info","message":"PUT /roles/1 - updating role by id","service":"user-service"}
+{"level":"info","message":"Updating role with id: 1","roleData":{"name":"now_updated"},"service":"user-service"}
+{"level":"info","message":"Fetching role with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully updated role with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /roles/1 - deleting role by id","service":"user-service"}
+{"level":"info","message":"Deleting role with id: 1","service":"user-service"}
+{"level":"info","message":"Fetching role with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully deleted role with id: 1","service":"user-service"}
+{"body":{"name":"pending_approval"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"level":"info","message":"Creating a new user status","service":"user-service","userStatusData":{"name":"pending_approval"}}
+{"level":"info","message":"Successfully created a new user status","service":"user-service","userStatus":{"createdAt":"2025-09-16T05:19:41.856Z","id":1,"name":"pending_approval","updatedAt":"2025-09-16T05:19:41.856Z"}}
+{"level":"info","message":"GET /user-statuses - fetching all user statuses","service":"user-service"}
+{"level":"info","message":"Fetching all user statuses","service":"user-service"}
+{"level":"info","message":"Successfully fetched all user statuses","service":"user-service"}
+{"body":{"name":"was_updated"},"level":"info","message":"PUT /user-statuses/1 - updating user status by id","service":"user-service"}
+{"level":"info","message":"Updating user status with id: 1","service":"user-service","userStatusData":{"name":"was_updated"}}
+{"level":"info","message":"Successfully updated user status with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/1 - deleting user status by id","service":"user-service"}
+{"level":"info","message":"Deleting user status with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully deleted user status with id: 1","service":"user-service"}
+{"body":{"name":"pending"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"level":"info","message":"Successfully created a new user status","service":"user-service","userStatus":{"id":4,"name":"pending"}}
+{"body":{"name":"new_admin"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"body":{"name":"pending"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"level":"info","message":"Successfully created a new role","role":{"id":3,"name":"new_admin"},"service":"user-service"}
+{"level":"info","message":"GET /user-statuses - fetching all user statuses","service":"user-service"}
+{"level":"info","message":"Successfully fetched all user statuses","service":"user-service"}
+{"level":"info","message":"GET /user-statuses/1 - fetching user status by id","service":"user-service"}
+{"level":"info","message":"Successfully fetched user status with id: 1","service":"user-service"}
+{"body":{"name":"new_admin"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"level":"info","message":"GET /user-statuses/99 - fetching user status by id","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new role","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found","service":"user-service"}
+{"level":"info","message":"GET /roles - fetching all roles","service":"user-service"}
+{"body":{"name":"archived"},"level":"info","message":"PUT /user-statuses/1 - updating user status by id","service":"user-service"}
+{"level":"info","message":"Successfully updated user status with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully fetched all roles","service":"user-service"}
+{"body":{"name":"non_existent"},"level":"info","message":"PUT /user-statuses/99 - updating user status by id","service":"user-service"}
+{"level":"info","message":"GET /roles/1 - fetching role by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found for update","service":"user-service"}
+{"level":"info","message":"Successfully fetched role with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/1 - deleting user status by id","service":"user-service"}
+{"level":"info","message":"GET /roles/99 - fetching role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found","service":"user-service"}
+{"level":"info","message":"Successfully deleted user status with id: 1","service":"user-service"}
+{"body":{"name":"super_admin"},"level":"info","message":"PUT /roles/1 - updating role by id","service":"user-service"}
+{"level":"info","message":"Successfully updated role with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/99 - deleting user status by id","service":"user-service"}
+{"level":"warn","message":"User status with id: 99 not found for deletion","service":"user-service"}
+{"body":{"name":"non_existent"},"level":"info","message":"PUT /roles/99 - updating role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found for update","service":"user-service"}
+{"level":"info","message":"DELETE /roles/1 - deleting role by id","service":"user-service"}
+{"level":"info","message":"Successfully deleted role with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /roles/99 - deleting role by id","service":"user-service"}
+{"level":"warn","message":"Role with id: 99 not found for deletion","service":"user-service"}
+{"body":{"name":"pending_approval"},"level":"info","message":"POST /user-statuses - creating a new user status","service":"user-service"}
+{"level":"info","message":"Creating a new user status","service":"user-service","userStatusData":{"name":"pending_approval"}}
+{"level":"info","message":"Successfully created a new user status","service":"user-service","userStatus":{"createdAt":"2025-09-16T05:21:36.335Z","id":1,"name":"pending_approval","updatedAt":"2025-09-16T05:21:36.335Z"}}
+{"level":"info","message":"GET /user-statuses - fetching all user statuses","service":"user-service"}
+{"level":"info","message":"Fetching all user statuses","service":"user-service"}
+{"level":"info","message":"Successfully fetched all user statuses","service":"user-service"}
+{"body":{"name":"was_updated"},"level":"info","message":"PUT /user-statuses/1 - updating user status by id","service":"user-service"}
+{"level":"info","message":"Updating user status with id: 1","service":"user-service","userStatusData":{"name":"was_updated"}}
+{"level":"info","message":"Successfully updated user status with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /user-statuses/1 - deleting user status by id","service":"user-service"}
+{"level":"info","message":"Deleting user status with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully deleted user status with id: 1","service":"user-service"}
+{"body":{"name":"e2e_tester"},"level":"info","message":"POST /roles - creating a new role","service":"user-service"}
+{"level":"info","message":"Creating a new role","roleData":{"name":"e2e_tester"},"service":"user-service"}
+{"level":"info","message":"Successfully created a new role","role":{"createdAt":"2025-09-16T05:21:37.070Z","id":1,"name":"e2e_tester","updatedAt":"2025-09-16T05:21:37.070Z"},"service":"user-service"}
+{"level":"info","message":"GET /roles - fetching all roles","service":"user-service"}
+{"level":"info","message":"Fetching all roles","service":"user-service"}
+{"level":"info","message":"Successfully fetched all roles","service":"user-service"}
+{"body":{"name":"now_updated"},"level":"info","message":"PUT /roles/1 - updating role by id","service":"user-service"}
+{"level":"info","message":"Updating role with id: 1","roleData":{"name":"now_updated"},"service":"user-service"}
+{"level":"info","message":"Fetching role with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully updated role with id: 1","service":"user-service"}
+{"level":"info","message":"DELETE /roles/1 - deleting role by id","service":"user-service"}
+{"level":"info","message":"Deleting role with id: 1","service":"user-service"}
+{"level":"info","message":"Fetching role with id: 1","service":"user-service"}
+{"level":"info","message":"Successfully deleted role with id: 1","service":"user-service"}

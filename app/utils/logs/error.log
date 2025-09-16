@@ -1,2 +1,10 @@
 {"error":"Database error","level":"error","message":"Error creating a new user status","service":"user-service"}
 {"error":"Database error","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new role","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"error":"Database failure","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"error":"Database failure","level":"error","message":"Error creating a new role","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new role","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new user status","service":"user-service"}
+{"error":"Internal Server Error","level":"error","message":"Error creating a new role","service":"user-service"}

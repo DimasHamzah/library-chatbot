@@ -1,9 +1,9 @@
-const userStatusRepository = require('../app/repositories/UserStatusRepository');
-const { UserStatus } = require('../app/db/models');
+const userStatusRepository = require('../../app/repositories/UserStatusRepository');
+const { UserStatus } = require('../../app/db/models');
 
 // Mock the UserStatus model to isolate the repository
 // We only need to mock the parts of the module that are used by the repository
-jest.mock('../app/db/models', () => ({
+jest.mock('../../app/db/models', () => ({
   UserStatus: {
     create: jest.fn(),
     findAll: jest.fn(),

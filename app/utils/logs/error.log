@@ -8,3 +8,4 @@
 {"error":"Internal Server Error","level":"error","message":"Error creating a new role","service":"user-service"}
 {"error":"Internal Server Error","level":"error","message":"Error creating a new user status","service":"user-service"}
 {"error":"Internal Server Error","level":"error","message":"Error creating a new role","service":"user-service"}
+{"error":"Table 'library-management.roles' doesn't exist","level":"error","message":"Error updating role with id: 1","service":"user-service"}
